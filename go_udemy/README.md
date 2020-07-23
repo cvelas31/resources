@@ -1,10 +1,28 @@
 # Go
+
+# Summary
+- Is a pass by value language (Every input that enters to function copies to another memory slot)
+- At every file on our working dir must have `package name``
+- Imports at the beginning as strings
+- Custom types created as `type name_type []string`
+- Function syntax:
+    ```go
+    func (type_owner or receiver) name_func(input type_input) (output_type) {
+        body
+        }
+    ```
+- Struct syntax:
+
+
+
+
+# Execute
 - Run:
 go run main.go
 
 ## CLI
 1. go run
-    - Compiles and executes one or two files
+    - Compiles and executes one or N files
 2. go build
     - Compiles a bunch of go source code files
     - Then we can run the name of the compiled files as .exe in Windows
@@ -38,5 +56,6 @@ Regular functions
 func name(arguments){
     Body
 }
-``` 
+```
 
+**Structs**
