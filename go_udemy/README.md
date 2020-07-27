@@ -11,7 +11,9 @@
         body
         }
     ```
-- Struct syntax:
+- Struct syntax `type name struc (key: value)`
+- Operand `&` take the adress of that variable (Çpoint the address)
+- Operand `*`give the value a memory adress is pointing
 
 
 
@@ -58,4 +60,14 @@ func name(arguments){
 }
 ```
 
-**Structs**
+**Pointers**
+```go
+func (pointerToPerson *person) updateName(){//This pointer is a type description: Means we are working with a ponter to a person 
+    *pointerToPerson//This is an operator: Means we want to manipulate the value the pointer is referencing
+}
+```
+
+## Types in Go
+- **Value Types**: int, float, string, bool, structs. This are kind of nonmutable whiich copies when entering to a function. Need to worry about pointers *.
+
+- **Reference Types**: slices, maps, channels, pointers, functions. This are kind of lists, dictiionaries which gets the same object or pointer in memory when copied.
