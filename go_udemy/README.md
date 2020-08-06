@@ -12,15 +12,16 @@
         }
     ```
 - Struct syntax `type name struc (key: value)`
-- Operand `&` take the adress of that variable (Çpoint the address)
+- Operand `&` take the adress of that variable (Point the address)
 - Operand `*`give the value a memory adress is pointing
-
-
+- Map (key, value). Keys one type and values another type.
+- Interfaces. All types inside that have some "same" functions (return and  get inputs of the same type) and its called the same.
+    - Its kind of shared type, inherits the functions of it.
 
 
 # Execute
 - Run:
-go run main.go
+go run main.go other.go
 
 ## CLI
 1. go run
@@ -55,8 +56,9 @@ Standard packages:
 **Functions**
 Regular functions
 ```Go
-func name(arguments){
+func name(arguments) outputType{
     Body
+    return outputs
 }
 ```
 
@@ -67,7 +69,30 @@ func (pointerToPerson *person) updateName(){//This pointer is a type description
 }
 ```
 
+**Maps**
+```go
+a = map[string]string{
+    "Hello": "Hola",
+    }
+a["Como"] =  "How"
+```
+
+**Interfaces**
+```go
+type ExampleInterface interface {
+    exampleFunction(string) string
+    exampleFunction2(*pointer) int
+}
+```
+
+**Type Assertion**
+```go
+var i interface{} = "hello"
+s := i.(string)
+fmt.Println(s)
+```
+
 ## Types in Go
-- **Value Types**: int, float, string, bool, structs. This are kind of nonmutable whiich copies when entering to a function. Need to worry about pointers *.
+- **Value Types**: int, float, string, bool, structs. This are kind of nonmutable which copies when entering to a function. Need to worry about pointers *.
 
 - **Reference Types**: slices, maps, channels, pointers, functions. This are kind of lists, dictiionaries which gets the same object or pointer in memory when copied.
